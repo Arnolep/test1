@@ -14,6 +14,19 @@ function Person(props) {
         </Col>
     );
 }
+function Person2(props) {
+    const {person} = props;
+    return (
+        <Col xs={6} sm={4} md={3} lg={2}>
+            <MyCard title={person.name}>
+                <div>{person.age}</div>
+                <div>{person.city}</div>
+                <div>{person.school}</div>
+
+            </MyCard>
+        </Col>
+    );
+}
 
 Person.propTypes = {
     person: PropTypes.shape({
@@ -28,6 +41,14 @@ export function Persons(props) {
     return (
         <Section title={title}>
             {persons.map(p => <Person key={p.id} person={p}/>)}
+        </Section>
+    );
+}
+export function Persons2(props) {
+    const {persons, title} = props;
+    return (
+        <Section title={title}>
+            {persons.map(p => <Person2 key={p.id} person={p}/>)}
         </Section>
     );
 }

@@ -3,6 +3,9 @@ function numberOfPersonsForCity(persons, city) {
     //no need for reduce!!!!
     return persons.filter(p => p.city === city).length;
 }
+export function isFromCity(persons,school){
+return persons.filter(p => p.school === school);
+}
 
 export function citiesFromPersonData(persons) {
     const uniqueCityNames = [...new Set(persons.map(p => p.city))];
