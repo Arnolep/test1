@@ -1,7 +1,7 @@
 import * as PropTypes from "prop-types";
 import {Persons, Persons2} from "../components/Persons";
-import {AreFromSchool, isFromSchool, schoolsFromPersonData} from "../utilities/person_utilities";
-import {Schools} from "../components/Schools";
+import {AreFromSchool, FromPersonData, isFromSchool, schoolsFromPersonData} from "../utilities/person_utilities";
+import {Schools, StudentList} from "../components/Schools";
 Persons2.propTypes = {title: PropTypes.string};
 
 export function TestPage(props) {
@@ -11,6 +11,7 @@ export function TestPage(props) {
             <Persons2 persons={persons} title="alle personen"/>
             <Persons persons={isFromSchool(persons,"ANT")} title="Antwerpen"/>
             <Schools schools={schoolsFromPersonData(persons)} title="alle scholen"/>
+            {/*<StudentList props={persons}></StudentList>*/}
         </div>
     )
 }

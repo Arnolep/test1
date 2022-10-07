@@ -2,6 +2,12 @@ import {MyCard} from "./MyCard";
 import {Col} from "react-bootstrap";
 import {Section} from "./Section";
 
+// export function StudentList(props){
+//     const {persons} = props
+//     return(
+//         {persons.map(p => {p.name})}
+//     );
+// }
 function School(props) {
     const {school} = props;
     return (
