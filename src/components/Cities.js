@@ -16,7 +16,6 @@ function City(props) {
 
 City.propTypes = {
     city: PropTypes.shape({
-        name: PropTypes.string.isRequired,
         numberOfPersons: PropTypes.number.isRequired,
     })
 }
